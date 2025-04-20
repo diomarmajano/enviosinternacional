@@ -1,10 +1,14 @@
-package model;
+package envios.internacional.enviosinternacional.model;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.Getter;
+import lombok.NonNull;
 import lombok.Setter;
+
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "envios")
@@ -16,17 +20,18 @@ public class Envios {
 
     @Getter @Setter
     @NotNull
-    @Size(min = 10, max = 10)
     @Column(name = "trackingId")
     private int trackingId;
 
     @Getter @Setter
     @NotNull
+    @Pattern(regexp = "^[a-zA-Z ]+$", message = "El nombre solo debe tener letras")
     @Column(name = "remitente")
     private String remitente;
 
     @Getter @Setter
     @NotNull
+    @Pattern(regexp = "^[a-zA-Z ]+$", message = "El destinatario solo debe tener letras")
     @Column(name = "destinatario")
     private String destinatario;
 
@@ -37,11 +42,13 @@ public class Envios {
 
     @Getter @Setter
     @NotNull
+    @Pattern(regexp = "^[a-zA-Z ]+$", message = "Solo deben haber letras")
     @Column(name = "paisOrigen")
     private String paisOrigen;
 
     @Getter @Setter
     @NotNull
+    @Pattern(regexp = "^[a-zA-Z ]+$", message = "Solo deben haber letras")
     @Column(name = "paisDestino")
     private String paisDestino;
 
@@ -57,10 +64,10 @@ public class Envios {
     @Getter @Setter
     @NotNull
     @Column(name = "fechaEnvio")
-    private String fechaEnvio;
+    private LocalDate fechaEnvio;
 
     @Getter @Setter
     @NotNull
     @Column(name = "fechaEstimadaEntrega")
-    private String fechaEstimadaEntrega;
+    private LocalDate fechaEstimadaEntrega;
 }
