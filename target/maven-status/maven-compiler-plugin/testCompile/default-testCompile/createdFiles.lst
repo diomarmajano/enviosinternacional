@@ -1,0 +1,4 @@
+envios\internacional\enviosinternacional\controller\enviosControllerTest.class
+envios\internacional\enviosinternacional\service\enviosServiceTest.class
+envios\internacional\enviosinternacional\repository\envioaRepositoryTest.class
+envios\internacional\enviosinternacional\EnviosinternacionalApplicationTests.class

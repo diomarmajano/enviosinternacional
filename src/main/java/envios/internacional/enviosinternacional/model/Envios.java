@@ -7,13 +7,14 @@ import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
+import org.springframework.hateoas.RepresentationModel;
 
 import java.time.LocalDate;
 
 @Entity
 @Table(name = "envios")
-public class Envios {
-    @Getter @Setter
+public class Envios extends RepresentationModel<Envios>{
+    @Getter @Setter 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
