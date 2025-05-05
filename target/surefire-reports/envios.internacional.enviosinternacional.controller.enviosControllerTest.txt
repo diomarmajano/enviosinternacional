@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: envios.internacional.enviosinternacional.controller.enviosControllerTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.488 s -- in envios.internacional.enviosinternacional.controller.enviosControllerTest
